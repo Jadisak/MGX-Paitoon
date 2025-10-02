@@ -52,15 +52,15 @@
     <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 
-<body class="font-thai-sans bg-gradient-to-br from-soft-green-50 to-soft-green-100">
+<body class="font-thai-sans bg-gradient-to-br from-soft-green-100 to-soft-green-300">
     <!-- Header Placeholder -->
     <header id="header-placeholder"></header>
 
-    <main class="pt-16">
+    <main class="pt-0">
         <!-- Contact Section -->
-        <section id="contact" class="max-w-4xl mx-auto py-12 bg-white/80 overflow-x-hidden">
+        <section id="contact" class="max-w-4xl mx-auto pb-12 pt-24 bg-white/50 overflow-x-hidden">
             <div class="mx-auto px-1 sm:px-4 lg:px-16">
-                <div class="text-center mb-16">
+                <div class="text-center mb-8">
                     <h2 class="text-3xl md:text-4xl font-thai-serif font-bold text-soft-green-500 mb-4">ติดต่อเรา</h2>
                     <div class="w-24 h-1 bg-soft-green-300 mx-auto"></div>
                 </div>
@@ -111,42 +111,42 @@
                     </div>
 
                     <!-- Contact Form -->
-                    <div class="bg-soft-green-100 col-span-1 xmd:col-span-3 p-3 sm:p-6 rounded-2xl shadow-lg" xx-data="contactForm()">
-                        <h3 class="text-2xl text-soft-green-400 mb-6">ส่งข้อความถึงเรา</h3>
-                        <form @submit.preventxx="submitForm" class="space-y-2">
+                    <div class="bg-green-100 col-span-1 p-3 sm:p-6 rounded-2xl shadow-lg" xx-data="contactForm()">
+                        <h3 class="text-2xl text-soft-green-400 mb-3">ส่งข้อความถึงเรา</h3>
+                        <form @submit.preventxx="submitForm" class="space-y-1">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">ชื่อ-นามสกุล *</label>
+                                <label for="name" class="block text-sm font-medium text-gray-400 mt-3 mb-1">ชื่อ-นามสกุล *</label>
                                 <input type="text" id="name" x-model="form.name" required 
                                        class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 focus:border-transparent transition-all bg-white">
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-400 mb-2">อีเมล *</label>
+                                <label for="email" class="block text-sm font-medium text-gray-400 mt-3 mb-1">อีเมล *</label>
                                 <input type="email" id="email" x-model="form.email" required 
                                        class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 focus:border-transparent transition-all bg-white">
                             </div>
                             <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-400 mb-2">เบอร์โทรศัพท์</label>
+                                <label for="phone" class="block text-sm font-medium text-gray-400 mt-3 mb-1">เบอร์โทรศัพท์</label>
                                 <input type="tel" id="phone" x-model="form.phone" 
                                        class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 focus:border-transparent transition-all bg-white">
                             </div>
                             <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-400 mb-2">หัวข้อ *</label>
+                                <label for="subject" class="block text-sm font-medium text-gray-400 mt-3 mb-1">หัวข้อ *</label>
                                 <input type="text" id="subject" x-model="form.subject" required 
                                        class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 focus:border-transparent transition-all bg-white">
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium text-gray-400 mb-2">ข้อความ *</label>
+                                <label for="message" class="block text-sm font-medium text-gray-400 mt-3 mb-1">ข้อความ *</label>
                                 <textarea id="message" rows="4" x-model="form.message" required 
-                                          class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 focus:border-transparent transition-all resize-none bg-white"></textarea>
+                                          class="w-full px-4 py-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-soft-green-500 focus:border-transparent transition-all resize-none bg-white mb-2"></textarea>
                             </div>
                             <button type="submit" :disabled="isSubmitting" 
-                                    class="w-full bg-soft-green-600 hover:bg-soft-green-500 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+                                class="w-full bg-soft-green-600 hover:bg-soft-green-500 disabled:bg-gray-400 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105">
                                 <span x-show="!isSubmitting">ส่งข้อความ</span>
-                                <span x-show="isSubmitting">กำลังส่ง...</span>
+                                <!-- <span x-show="isSubmitting">กำลังส่ง...</span> -->
                             </button>
                         </form>
                         <div x-show="showMessage" x-text="message" :class="messageType === 'success' ? 'text-green-600' : 'text-red-600'" 
-                             class="mt-4 p-3 rounded-lg text-center font-medium"></div>
+                             class="mt-0 p-0 rounded-lg text-center font-medium"></div>
                     </div>
                 </div>
             </div>
