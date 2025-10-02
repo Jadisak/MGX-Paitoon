@@ -1,5 +1,5 @@
-<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-lg z-50 mb-12" x-data="{ isOpen: false }">
-    <div class="max-w-7xl mx-auto pt-2 px-4 sm:px-6 lg:px-8">
+<nav class="fixed top-0 w-full sm:shadow-lg shadow-none z-50 mb-12 sm:bg-white" x-data="{ isOpen: false }">
+    <div class="max-w-6xl mx-auto pt-2 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="flex justify-between items-center h-12">
             <a href="./index.html" class="flex items-center relative">
                 <div class="w-20 md:w-[6.5rem] bg-red-200"></div>
@@ -17,20 +17,20 @@
             </div>
             <div class="lg:hidden">
                 <button @click="isOpen = !isOpen" class="text-soft-green-500 hover:text-soft-green-600 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
         </div>
     </div>
-    <div x-show="isOpen" class="lg:hidden" id="mobile-nav-links">
-        <div class="pt-2 pb-3 space-y-1 xsm:px-3 w-2/3 pr-6 mx-auto text-right">
-            <a href="./index.html" class="nav-link text-soft-green-500 hover:text-soft-green-600 block px-1 py-2 rounded-md text-base font-medium">หน้าหลัก</a>
-            <a href="./about.html" class="nav-link text-soft-green-500 hover:text-soft-green-600 block px-1 py-2 rounded-md text-base font-medium">เกี่ยวกับเรา</a>
-            <a href="./video.html" class="nav-link text-soft-green-500 hover:text-soft-green-600 block px-1 py-2 rounded-md text-base font-medium">วิดีโอ</a>
-            <a href="./contact.html" class="nav-link text-soft-green-500 hover:text-soft-green-600 block px-1 py-2 rounded-md text-base font-medium">ติดต่อเรา</a>
-            <a href="./location.html" class="nav-link text-soft-green-500 hover:text-soft-green-600 block px-1 py-2 rounded-md text-base font-medium">ที่ตั้ง</a>
+    <div x-show="isOpen" class="lg:hidden duration-700 w-1/2 mx-auto" id="mobile-nav-links">
+        <div class="text-center space-y-1 pt-4 flex flex-col mx-auto relative">
+            <a href="./index.html" class="nav-link text-lime-200 hover:text-teal-300 px-3 pt-1.5 py-0.5 rounded-t-xl text-lg font-medium transition-colors duration-700 bg-green-600/90 hover:border-x-4 border-lime-400">หน้าหลัก</a>
+            <a href="./about.html" class="nav-link text-lime-200 hover:text-teal-300 px-3 pt-1.5 py-0.5 text-lg font-medium transition-colors duration-700 bg-green-600/90 hover:border-x-4 border-lime-400">เกี่ยวกับเรา</a>
+            <a href="./video.html" class="nav-link text-lime-200 hover:text-teal-300 px-3 pt-1.5 py-0.5 text-lg font-medium transition-colors duration-700 bg-green-600/90 hover:border-x-4 border-lime-400">วิดีโอ</a>
+            <a href="./contact.html" class="nav-link text-lime-200 hover:text-teal-300 px-3 pt-1.5 py-0.5 text-lg font-medium transition-colors duration-700 bg-green-600/90 hover:border-x-4 border-lime-400">ติดต่อเรา</a>
+            <a href="./location.html" class="nav-link text-lime-200 hover:text-teal-300 px-3 pt-1.5 py-0.5 rounded-b-xl text-lg font-medium transition-colors duration-700 bg-green-600/90 hover:border-x-4 border-lime-400">ที่ตั้ง</a>
         </div>
     </div>
 </nav>
